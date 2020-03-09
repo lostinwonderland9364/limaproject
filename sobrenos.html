@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:700">
+    <!--W3 CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cantina da Vovó</title>
+    <style>
+       
+          
+
+    </style>
+    <header>
+        <nav>          
+            <ul >
+                <!--Side Menu-->   
+                <li><a href="#home"><img class="logo" src="vovó.jpeg" alt="gravura vovó sorrindo" style="border-radius: 50%; padding-left: 0px;"></a></li>
+                <li style="color: white; padding-top: 25px;"><a href="index.html">Cantina da Vovó</a></li>
+                <li style="padding-top: 25px;"><a href="#promocoes">Promoções</a></li>
+                <li style="padding-top: 25px;" ><a href="#pratos">Pratos</a></li>
+                <li style="padding-top: 25px;"><a href="#bebidas">Bebidas</a></li>
+                <li style="padding-top: 25px;"><a href="#contato">Contato</a></li>                           
+                                             
+                
+                <!--Search-->
+                <div class="input-group md-form form-sm form-2 pl-0" style="width: 200px; padding: 10px; padding-top: 39px;">
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                        <span class="input-group-text red lighten-3" id="basic-text1"><li><i class="fa fa-search" ></i></li></span>
+                    </div>
+                </div>
+            </ul>
+      </nav>
+  </header>
+  
+<!--CSS--> 
+<style>    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: orangered;
+      text-decoration: none;  
+    }
+    
+    a{
+      text-decoration: none;
+      padding: 50px;
+    }
+    
+    li {
+      float: left;
+      text-decoration: none;
+      
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 50px;
+      text-decoration: none;
+    }
+    
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+      background-color: rgb(122, 175, 17);
+      text-decoration: none;
+    }
+    label {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    input {
+      float: right;
+      display: block;
+      color: olivedrab;
+      text-align: middle;
+      padding: 2px 20px;
+      text-decoration: none;
+    }
+    
+    
+    .p{
+      opacity: 100%;
+    }
+    
+    article{
+      opacity: 100%;
+      
+    }
+    
+    .topnav .search-container button:hover {
+      background: olivedrab;
+      background-color: rgb(231, 247, 199);
+    }
+    
+    .input-group.md-form.form-sm.form-1 input{
+      border: 1px solid #ffca28;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+    .input-group.md-form.form-sm.form-2 input {
+      border: 1px solid olivedrab;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      color: olivedrab;
+    }
+    
+    .input-group.md-form.form-sm.form-2 input.amber-border {
+      border: 1px solid olivedrab; 
+    
+    }
+    
+    .logo{
+      
+      width: 62px;
+      margin-left: 0px;
+      padding-left:350px ;  
+    }
+    
+    nav{
+      padding-left:0px ; 
+      text-decoration:none; 
+      
+    }
+    
+    .fa{
+     color: orangered; 
+    }
+    .fa:hover{
+      color:olivedrab;
+    }
+    footer{
+      text-decoration: none;
+      
+    }
+    
+    .admin{
+      color: orangered; 
+    }
+    .admin:hover{
+      color: olivedrab;
+    }
+    .sobre{
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/a7c78f90085347.5e0d32ab6aed6.jpg); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center; 
+        height: 1000px;
+        color: white;
+        padding-top: 0px;  
+        display:flex;  
+      }
+    </style>
+</head>
+<body>
+
+    <!--Sobre nós-->
+    <div id="sobre" class="sobre">
+        <article style="text-align: justify;"><h1>Sobre nós</h1><p class="p">A cantina da vovó foi fundada em 2015, com o objetivo de trazer uma comida de ótima qualidade para você se sentir em casa saboreando as delícias da família com um toque especial da vovó. Tudo é feito artesanalmente, ingredientes frescos, de qualidade e preparados diariamente deixando um gostinho de quero mais. <br>
+            Nossa cantina é liderada pela Dona Isaura, nasceu no interior de Minas Gerais e hoje é conhecida como Isaurinha. De família humilde, aprendeu a cozinhar quando criança com a sua avó e desde então sempre teve o sonho de abrir um restaurante e fazer o que mais amava. O sonho se tornou realidade em 2015 com o espaço Cantina da Vovó, a casa é bem aconchegante e familiar trazendo aquela sensação de casa da vovó.<br>       
+            Em 2018 ganhou o prêmio de melhor comida caseira da região de Santo Amaro. Em 2019 foi premiada mais uma vez e ganhou destaque Nacional com o prêmio de melhor comida caseira do país, Isaurinha superou diversos desafios e concorrentes para alcançar o prêmio de maior orgulho de sua carreira. <br> Venha saborear e se deliciar com a melhor comida caseira do país!</p>
+        </article>    
+      </div>
+    
+
+       <!--Footer-->
+<div class="footer" style="height: 300px; background-color: orangered;" >
+    <form style="position: center">
+        <h5 style="padding-left: 80px; padding-top: 150px">Cantina da Vovó</h5>
+            <a href="index.html"><img src="vovó.jpeg" style="border-radius: 50%; width: 200px; padding-top: 30px; padding: 30px"></a>
+            <a href="https://pt-br.facebook.com/"><img src="logo-facebook.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Facebook</a>
+            <a href="https://www.instagram.com/accounts/login/?hl=pt-br"><img src="logo-instagram.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Instagram</a>
+            <a href="https://twitter.com/login?lang=pt"><img src="logo-twitter.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Twitter</a>
+          
+          
+          <nav class="admin" style="padding-left: 320px;">         
+            <a id="admin" class="footer" href="dashboard_.html" style="text-decoration:none" >Administrativo</a>
+            <a id="admin" class="footer" href="dashboard_.html" style="text-decoration:none">Marketing</a>
+            <a id="admin" class="footer" href="dashboard_.html" style="text-decoration:none">Vendas</a>
+            <a id="admin" class="footer" href="dashboard_.html" style="text-decoration:none">Contato</a>
+            
+          </nav>
+    </form>
+        
+  </div>
+</body>
+</html>

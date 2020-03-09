@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <!--Font Awesome-->
+    <script src="https://use.fontawesome.com/65a81abd4a.js"></script>  
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:700">
+    <!--W3 CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+    
+    
+   
+    <!--Google Charts Pie-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Total de Vendas', 'horas por dia'],
+          ['Cupim da Vovó',     11],
+          ['Boi da Vovó',      1],
+          ['Bisteca da Vovó',  8],
+          ['Franguinho da Vovó', 2],
+          ['Tilápia da Vovó',    7]
+        ]);
+
+        var options = {
+          title: 'Pratos mais vendidos'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <!--Google Donut Chart -->
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Pratos', 'horas por dia'],
+            ['Refeições',     11],
+            ['Lanches',      2],
+            ['Sobremesas',  2],
+            ['Saladas', 2],
+            ['Bebidas',    7]
+          ]);
+  
+          var options = {
+            title: 'Total de Vendas',
+            pieHole: 0.4,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+          chart.draw(data, options);
+        }
+      </script>
+
+      
+      <!--Google Column Chart-->
+      <script type="text/javascript">
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Elemento", "Vendas", { role: "style" } ],
+            ["Jason", 8.94, "gold"],
+            ["Artur", 10.49, "green"],
+            ["Juliane", 19.30, "purple"],
+            ["Total", 21.45, "blue"]
+          ]);
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            title: "Desempenho de Vendas por Funcionário",
+            width: 600,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+          chart.draw(view, options);
+      }
+      </script>
+
+      <!--Tabela-->
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['table']});
+        google.charts.setOnLoadCallback(drawTable);
+  
+        function drawTable() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Nome');
+          data.addColumn('number', 'Salário');
+          data.addColumn('boolean', 'Full Stack Developers');
+          data.addRows([
+            ['Juliane',  {v: 10000, f: '$10,000'}, true], 
+            ['Artur',   {v:8000,   f: '$8,000'},  false],
+            ['Jason', {v: 12500, f: '$12,500'}, true],
+            ['Adely',   {v: 7000,  f: '$7,000'},  true]
+          ]);
+  
+          var table = new google.visualization.Table(document.getElementById('table_div'));
+  
+          table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+        }
+      </script>
+
+
+      <!--Line Chart-->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Lucros/Prejuízos referentes a 2020');
+      data.addColumn('number', 'Fim de semanas');
+      data.addColumn('number', 'Bebidas');
+      data.addColumn('number', 'Delivery de Marmitas');
+
+      data.addRows([
+        [1,  37.8, 80.8, 41.8],
+        [2,  30.9, 69.5, 32.4],
+        [3,  25.4,   57, 25.7],
+        [4,  11.7, 18.8, 10.5],
+        [5,  11.9, 17.6, 10.4],
+        [6,   8.8, 13.6,  7.7],
+        [7,   7.6, 12.3,  9.6],
+        [8,  12.3, 29.2, 10.6],
+        [9,  16.9, 42.9, 14.8],
+        [10, 12.8, 30.9, 11.6],
+        [11,  5.3,  7.9,  4.7],
+        [12,  6.6,  8.4,  5.2],
+        [13,  4.8,  6.3,  3.6],
+        [14,  4.2,  6.2,  3.4]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Faturamento Anual em vendas de marmitas, bebidas e delivery de marmitas aos finais de semana',
+          subtitle: 'em milhões de Reais (R$)'
+        },
+        width: 900,
+        height: 500,
+        axes: {
+          x: {
+            0: {side: 'top'}
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+    
+    <title>Dashboard</title>
+</head>
+<style>
+
+.body{
+    width: 1920px;
+    height: 2000px;
+}    
+
+.header{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: orangered;
+    text-decoration: none;
+    padding-top: 0px;  
+    padding-left: 100px;   
+    padding: 0px;   
+    
+}
+      
+.logo{
+
+width: 82px;
+margin-left: 0px;
+padding-left:350px ;  
+}
+      
+a{
+text-decoration: none;
+padding-left: 0px;
+color: #000;
+font-size: 15px;
+}
+
+p{
+    color: white;
+}
+      
+li {
+float: left;
+text-decoration: none;
+color: white;
+padding-top: 55px;
+
+
+}
+
+li a {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 30px 50px ;
+text-decoration: none;
+opacity: 60%;
+margin-left: 0px;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+background-color: rgb(122, 175, 17);
+text-decoration: none;
+opacity: 100%;
+}
+    
+.fa{
+    color: darkgrey; 
+   }
+
+.fa:hover{
+    color:rgb(122, 175, 17);
+}
+
+#sidebar{
+    background: orangered;
+    max-width: 125px;    
+    margin-left: 0px;
+    text-align: center;
+
+}
+
+#sideMenu{
+    margin-left: 185px;
+    background-color: white; 
+    width:1066px;
+}
+
+#li:active{
+    border-right: 5px solid rgb(122, 175, 17);
+    opacity: 80%;
+}
+
+nav{
+    
+    display: flex;
+    color: white;
+    text-decoration:none;      
+    max-height: fit-content;
+    max-width: fit-content;
+    padding: 0px;
+    padding-top: 0px;
+    padding-left: 0px;      
+    text-align:center;
+}
+i{
+    color: rgb(17, 17, 17);
+    width: 20px;
+    height: 18px;
+}
+
+.card{
+    padding-left: 500px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dashboard-flex-parent{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    height: 600px;
+    
+   
+}
+
+.dashboard-content{
+    border: 1px solid white;
+    margin-left: 5px;
+    height: 600px;
+    width: 1066px;
+    display: inline-block;
+    
+}
+
+.main-content{
+    border: 1px solid white;
+    margin-left: 0px;
+    padding-top: 0px;
+    height: 600px;
+    width: 1066px;
+    padding-left: 0px;
+    
+}
+
+.dashboard-box{   
+    background-color: white;
+    height: 600px;
+    width: 1066px;
+    text-decoration: none;
+    
+
+
+}
+
+article {    
+    padding-left: 2px;
+    width: 100%;
+    background-color:white;
+    height: 750px;
+    width: 1068px; /* only for demonstration, should be removed */
+    margin-left: 0px;
+}
+.piechart{  
+    display: inline-block;    
+}
+
+.donutchart{
+    display: inline-block;
+}
+
+.container{
+    scroll-padding-right: 30px;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.table_div:hover{
+    color:rgb(122, 175, 17);
+}
+
+.footer{
+    display: flex;
+    padding-top: 200px;
+    height: 100px;
+}
+
+</style>
+
+<body class="body" style="font-size:35px;">
+    
+    <header>
+            <nav >            
+                <ul >  
+                    <!--Side Menu-->    
+                    <li><a style="opacity:100%;" href="index.html"><img class="logo" src="vovó.jpeg" alt="gravura vovó sorrindo" style="border-radius: 50%; padding-left: 0px; "></a></li>
+                    <li><a href="sobrenos.html">Cantina da Vovó</a></li>
+                    <li><a href="#promocoes"><p>Promoções</p></a></li>
+                    <li><a href="#pratos"><p>Pratos</p></a></li>
+                    <li><a href="#bebidas"><p>Bebidas</p></a></li>
+                    <li><a href="#contato"><p>Contato</p></a></li>
+                    
+                    
+                    
+                    <!--Search-->
+                    <li> 
+                        <div class="input-group md-form form-sm form-2 pl-0" style="width: 200px; padding: 10px; padding-top: 25px;">
+                        <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                            <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search" ></i></span>
+                            </div>                            
+                        </div>   
+                    </li>    
+                    <!-- Botão Menu-->  
+                        <span><li style="padding-top: 45px;"><a href="index.html"><i class="fa fa-sign-out" style="font-size: 25px; padding: 0px; color:white"></i><p>Sair</p></a></li></span>       
+                </ul>                
+            </nav> 
+            
+                
+           
+            
+            
+    </header>
+
+    <section id="sidebar">
+        <!--SideMenu-->
+        <nav>
+            <div>
+                <ul>
+                <div>
+                    <li>
+                        <a><i class="fa fa-money" style="font-size: 25px; padding: 0px; color:white"></i><p>Situação Financeira</p></a>                                              
+                    </li>                
+                </div>
+                <div>
+                    <li>
+                        <a><i class="fa fa-address-card" style="font-size: 25px; padding: 0px; color:white"></i><p>Registro de Funcionários</p></a>                                                                   
+                    </li>                
+                </div>
+                <div>
+                    <li>
+                        <a><i class="fa fa-pie-chart" style="font-size: 25px; padding: 0px; color:white"></i><p>Dashboards e Extratos</p></a>                                               
+                    </li>                
+                </div>
+                <div>
+                    <li>
+                        <a><i class="fa fa-clipboard" style="font-size: 25px; padding: 0px; color:white"></i><p>Faturas e Recibos</p></a>                                               
+                    </li>                
+                </div>
+                <div>
+                    <li>
+                        <a><i class="fa fa-credit-card" style="font-size: 25px; padding: 0px; color:white"></i><p>Gerenciar Cartões </p></a>                                               
+                    </li>                
+                </div>
+                <div>
+                    <li>
+                        <a><i class="fa fa-print" style="font-size: 25px; padding: 0px; color:white"></i><p>Imprimir Relatórios</p></a>                                               
+                    </li>                
+                </div> 
+                </ul>
+                
+            </div>
+            <section style="width: 800px;">
+                <article>
+                    <div class="container">
+                        <div id="chart"></div>  
+                    </div>
+                    <header>
+                        <a href="dashboard_.html"><i class="fa fa-home"></i>Home</a>
+                        
+                        <a href="index.html"><i class="fa fa-arrow-circle-left"></i>Voltar</a>
+            
+                    </header>            
+                    <div class="main-content">
+                        <div class="main-content-title">
+                        <h2 style="color:gray">Dashboards e Extratos</h2>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-flex-parent">
+                                <div class="dashboard-box">
+                                    <a href="dashboard_.html"><i class="fa fa-calendar" style="display: inline-block;"></i>Mensal</a>
+                                    <a href="dashboard_.html"><i class="fa fa-calendar" style="display: inline-block;"></i>Semanal</a>
+                                    <a href="dashboard_.html"><i class="fa fa-calendar" style="display: inline-block;"></i>Anual</a>
+                                    <a href="dashboard_.html"><i class="fa fa-calendar-check-o" style="display: inline-block;"></i>Concluído</a>
+                                     
+                                    <!--Gráficos-->
+                                    <table>
+                                        <td style="width: 500px;"><div id="piechart" style="width: 500px; height: 400px;"></div></td>                                       
+                                        <td style="width: 500px;"><div id="donutchart" style="width: 500px; height: 400px;"></div></td> <tr></tr>
+                                        <h1 style="color: gray">Faturamento</h1>                                        
+                                        <td style="width:500px;padding-left: 40px"><div id="line_top_x" style="width: 700px; height: 600px;"></div></div></td>
+                                    </table>
+                                    <h1 style="color: gray">Quadro de Funcionários</h1>
+                                    <div id="table_div" style="color:gray"></div>
+                                    <tr></tr>
+                                    <tr></tr>
+                                    <h1 style="color: gray">Indicadores de Desempenho</h1>
+                                    <td><div id="columnchart_values" style="width: 500px; height: 400px;"></div></td>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </article>
+        
+            </section>
+        </nav>   
+    </section>
+      
+</body>
+</html>	

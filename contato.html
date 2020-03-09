@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:700">
+    <!--W3 CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: orangered;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 50px;
+        }
+
+        li {
+            float: left;
+            text-decoration: none;
+
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 50px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: rgb(122, 175, 17);
+            text-decoration: none;
+        }
+
+        label {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        input {
+            float: right;
+            display: block;
+            color: olivedrab;
+            text-align: middle;
+            padding: 2px 20px;
+            text-decoration: none;
+        }
+
+
+        .p {
+            opacity: 100%;
+        }
+
+        article {
+            opacity: 100%;
+        }
+
+        .topnav .search-container button:hover {
+            background: olivedrab;
+            background-color: rgb(231, 247, 199);
+        }
+
+        .input-group.md-form.form-sm.form-1 input {
+            border: 1px solid #ffca28;
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+        }
+
+        .input-group.md-form.form-sm.form-2 input {
+            border: 1px solid olivedrab;
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+            color: olivedrab;
+        }
+
+        .input-group.md-form.form-sm.form-2 input.amber-border {
+            border: 1px solid olivedrab;
+
+        }
+
+        .logo {
+
+            width: 62px;
+            margin-left: 0px;
+            padding-left: 350px;
+        }
+
+        nav {
+            padding-left: 0px;
+            text-decoration: none
+        }
+
+        .fa {
+            color: orangered;
+        }
+
+        .fa:hover {
+            color: olivedrab;
+        }
+
+        footer {
+            text-decoration: none;
+        }
+
+        .admin {
+            color: orangered;
+        }
+
+        .admin:hover {
+            color: olivedrab;
+        }
+        /*div#formulario{
+            display: flex;
+            
+            padding-left: 200px;
+        }*/
+
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    #street-view {
+    height: 100%;
+    }
+    
+   
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!--Side Menu-->
+                <li><a href="#home"><img class="logo" src="vovó.jpeg" alt="gravura vovó sorrindo"
+                            style="border-radius: 50%; padding-left: 0px;"></a></li>
+                <li style="color: white; padding-top: 25px;"><a href="sobrenos.html">Cantina da Vovó</a></li>
+                <li style="padding-top: 25px;"><a href="#promocoes">Promoções</a></li>
+                <li style="padding-top: 25px;"><a href="#pratos">Pratos</a></li>
+                <li style="padding-top: 25px;"><a href="#bebidas">Bebidas</a></li>
+                <li style="padding-top: 25px;"><a href="contato.html">Contato</a></li>
+
+
+                <!--Search-->
+                <div class="input-group md-form form-sm form-2 pl-0"
+                    style="width: 200px; padding: 10px; padding-top: 39px;">
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <span class="input-group-text red lighten-3" id="basic-text1">
+                            <li><i class="fa fa-search"></i></li>
+                        </span>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <section class="w3-cell-row">
+        <aside class="w3-cell w3-gray" style="width: 30%;">
+            <p>OLA</p>
+        </aside>
+        <main class="w3-cell  w3-red"  style="width: 40%;">
+            <div id="formulario">
+                <form style="width: 50%;" name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Nome</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Sobrenome</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            placeholder="Digite o seu sobrenome...">
+        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@exemplo.com">
+        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Telefone</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="(DDD) 9XXXX-XXXX">
+        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Assunto</label>
+                        <input type="text" name="fname" class="form-control" placeholder="Sobre o que você quer falar?">
+        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Categoria</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Selecione...</option>
+                            <option>Sugestões</option>
+                            <option>Reclamações</option>
+                            <option>Dúvidas</option>
+                            <option>Trabalhe conosco</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Escreva para nós:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div style="text-align: right;">
+                        <button type="submit" value="Submit" class="btn btn-danger">Enviar</button>
+                    </div>
+                   
+                             
+                        <a href="https://pt-br.facebook.com/"><img src="logo-facebook.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Facebook</a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=pt-br"><img src="logo-instagram.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Instagram</a>
+                        <a href="https://twitter.com/login?lang=pt"><img src="logo-twitter.svg" style="border-radius: 50%; width: 80px; padding-top: 30px; text-decoration:none">Twitter</a>
+                
+                </form>
+                
+            </div>
+        </main>
+        <aside class="w3-cell  w3-green"  style="width: 30%;">
+            <p>OLA</p>
+        </aside>
+    </section>
+    
+
+    <section>
+
+
+       
+              
+    </section>
+    
+        <div id="street-view"></div>
+    <script>
+      var panorama;
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'),
+            {
+              position: {lat: 37.869260, lng: -122.254811},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+      }
+    </script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDpE2y3_TQCj2YEVmdf8FdjdbPMNFhMyQ&callback=initialize">
+    </script>
+
+
+    
+    
+</body>
+
+</html>
